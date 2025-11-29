@@ -1,0 +1,258 @@
+.admin-booking-page {
+  min-height: calc(100vh - 60px);
+  background: #f5f5f7;
+  padding: 24px 16px 40px;
+}
+
+.admin-booking-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.admin-booking-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.admin-booking-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* Карточки */
+.admin-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 16px 18px 18px;
+  margin-bottom: 18px;
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.05);
+  border: 1px solid #e5e7eb;
+}
+
+.admin-card-muted {
+  background: #f9fafb;
+}
+
+.admin-section-title {
+  margin: 0 0 12px;
+  font-size: 18px;
+}
+
+/* Основной блок с данными */
+.admin-booking-main-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.admin-booking-main-col {
+  flex: 1 1 260px;
+}
+
+.admin-field-row {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 8px;
+}
+
+.admin-field-label {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.admin-field-value {
+  font-size: 14px;
+  color: #111827;
+}
+
+.admin-card-actions {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* Кнопки */
+.admin-btn {
+  border-radius: 10px;
+  padding: 8px 14px;
+  border: 1px solid #2b6be7;
+  background: #2b6be7;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.15s ease;
+  white-space: nowrap;
+}
+
+.admin-btn:hover {
+  background: #2156c0;
+  border-color: #2156c0;
+}
+
+.admin-btn-small {
+  padding: 6px 10px;
+  font-size: 13px;
+}
+
+.admin-btn-secondary {
+  background: #ffffff;
+  color: #1f2933;
+  border-color: #d1d5db;
+}
+
+.admin-btn-secondary:hover {
+  background: #f9fafb;
+  border-color: #9aa4b2;
+}
+
+.admin-btn-danger {
+  background: #f97373;
+  border-color: #f97373;
+  color: #fff;
+}
+
+.admin-btn-danger:hover {
+  background: #ef4444;
+  border-color: #ef4444;
+}
+
+/* Чип-кнопка для ID/ресурса */
+.admin-chip-button {
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 13px;
+  border: 1px solid #d1d5db;
+  background: #f9fafb;
+  cursor: pointer;
+  transition: 0.15s ease;
+}
+
+.admin-chip-button:hover {
+  background: #e5edff;
+  border-color: #2b6be7;
+}
+
+/* Таблицы */
+.admin-table-wrapper {
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.admin-table thead tr {
+  background: #f9fafb;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.admin-table th {
+  font-weight: 600;
+  color: #374151;
+}
+
+.admin-table tbody tr:hover {
+  background: #f3f4ff;
+}
+
+.admin-table-actions {
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* Описание issue */
+.admin-issue-desc-cell {
+  max-width: 320px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Статусы брони */
+.booking-status {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.booking-status-active {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.booking-status-completed {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.booking-status-cancelled,
+.booking-status-canceled {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.booking-status-conflicted {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+/* Алерты / текст / ссылки */
+.admin-alert-error {
+  margin-bottom: 12px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+  font-size: 13px;
+}
+
+.admin-alert-success {
+  margin-bottom: 12px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: #ecfdf5;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+  font-size: 13px;
+}
+
+.admin-muted {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.admin-link {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+  .admin-booking-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .admin-table-actions {
+    text-align: left;
+  }
+}
+    

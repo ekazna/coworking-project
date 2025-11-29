@@ -1,0 +1,172 @@
+.admin-page {
+  min-height: calc(100vh - 60px);
+  background: #f5f5f7;
+  padding: 24px 16px 40px;
+}
+
+.admin-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Заголовок */
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.admin-title {
+  margin: 0;
+  font-size: 22px;
+}
+
+.admin-subtitle {
+  margin: 2px 0 0;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* Карточка фильтра */
+.admin-filter-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 14px 16px;
+  margin-bottom: 14px;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.04);
+  border: 1px solid #e5e7eb;
+}
+
+.admin-filter-field {
+  max-width: 360px;
+}
+
+.admin-filter-label {
+  display: block;
+  font-size: 13px;
+  color: #374151;
+  margin-bottom: 4px;
+}
+
+.admin-filter-input {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  padding: 8px 10px;
+  font-size: 14px;
+  outline: none;
+  background: #f9fafb;
+  transition: border 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+}
+
+.admin-filter-input:focus {
+  border-color: #2b6be7;
+  background: #ffffff;
+  box-shadow: 0 0 0 1px rgba(43, 107, 231, 0.2);
+}
+
+/* Таблица */
+.admin-table-wrapper {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+  border: 1px solid #e5e7eb;
+  padding: 8px 0;
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+  font-size: 14px;
+}
+
+.admin-table thead tr {
+  background: #f9fafb;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.admin-table th {
+  font-weight: 600;
+  font-size: 13px;
+  color: #4b5563;
+  white-space: nowrap;
+}
+
+.admin-table tbody tr:hover {
+  background: #f3f4ff;
+}
+
+.admin-table-empty {
+  text-align: center;
+  padding: 16px 12px;
+  color: #6b7280;
+}
+
+/* Бэйджи */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  font-size: 12px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+}
+
+.badge-role-admin {
+  background: #eef2ff;
+  border-color: #c7d2fe;
+  color: #3730a3;
+}
+
+.badge-role-client {
+  background: #ecfeff;
+  border-color: #a5f3fc;
+  color: #036672;
+}
+
+.badge-active {
+  background: #ecfdf3;
+  border-color: #a7f3d0;
+  color: #047857;
+}
+
+.badge-inactive {
+  background: #fef2f2;
+  border-color: #fecaca;
+  color: #b91c1c;
+}
+
+/* Кнопки в таблице */
+.btn-small {
+  padding: 4px 10px;
+  font-size: 13px;
+}
+
+/* Ошибка */
+.alert-error {
+  margin: 6px 0 10px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+  font-size: 13px;
+}
+
+/* Адаптив */
+@media (max-width: 640px) {
+  .admin-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

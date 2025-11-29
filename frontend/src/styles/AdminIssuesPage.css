@@ -1,0 +1,242 @@
+.admin-issues-page {
+  min-height: calc(100vh - 60px);
+  background: #f5f5f7;
+  padding: 24px 16px 40px;
+}
+
+.admin-issues-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.admin-issues-title {
+  margin: 0 0 16px;
+  font-size: 24px;
+}
+
+/* Фильтры */
+.admin-issues-filters {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 14px 18px 16px;
+  margin-bottom: 18px;
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.05);
+  border: 1px solid #e5e7eb;
+}
+
+.admin-issues-filters-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+/* небольшой отступ между строками фильтров */
+.admin-issues-filters-row + .admin-issues-filters-row {
+  margin-top: 10px;
+}
+
+.admin-filter-label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 14px;
+  color: #374151;
+}
+
+.admin-select {
+  min-width: 180px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  padding: 8px 10px;
+  font-size: 14px;
+  background: #f9fafb;
+  outline: none;
+  transition: border 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+}
+
+.admin-select:focus {
+  border-color: #2b6be7;
+  background: #ffffff;
+  box-shadow: 0 0 0 1px rgba(43, 107, 231, 0.2);
+}
+
+/* Инпуты поиска (номер брони, логин) */
+.admin-input {
+  min-width: 220px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  padding: 8px 10px;
+  font-size: 14px;
+  background: #ffffff;
+  outline: none;
+  transition: border 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+}
+
+.admin-input::placeholder {
+  color: #9ca3af;
+}
+
+.admin-input:focus {
+  border-color: #2b6be7;
+  background: #ffffff;
+  box-shadow: 0 0 0 1px rgba(43, 107, 231, 0.2);
+}
+
+/* Кнопки */
+.admin-btn {
+  border-radius: 10px;
+  padding: 8px 14px;
+  border: 1px solid #2b6be7;
+  background: #2b6be7;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.15s ease;
+  white-space: nowrap;
+}
+
+.admin-btn:hover {
+  background: #2156c0;
+  border-color: #2156c0;
+}
+
+.admin-btn-secondary {
+  background: #ffffff;
+  color: #1f2933;
+  border-color: #d1d5db;
+}
+
+.admin-btn-secondary:hover {
+  background: #f9fafb;
+  border-color: #9aa4b2;
+}
+
+.admin-btn-small {
+  padding: 6px 10px;
+  font-size: 13px;
+}
+
+/* Таблица */
+.admin-table-wrapper {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 16px 18px 18px;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+  border: 1px solid #e5e7eb;
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.admin-table thead tr {
+  background: #f9fafb;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.admin-table th {
+  font-weight: 600;
+  color: #374151;
+}
+
+.admin-table tbody tr:hover {
+  background: #f3f4ff;
+}
+
+.admin-table-actions {
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* Описание */
+.issue-desc-cell {
+  max-width: 260px;
+}
+
+/* Бейджи статуса / типа */
+.issue-status {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.issue-status-new {
+  background: #eef2ff;
+  color: #4338ca;
+}
+
+.issue-status-confirmed {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.issue-status-resolved {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.issue-status-rejected {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.issue-type-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  background: #f3f4f6;
+  color: #374151;
+}
+
+/* Алерты / текст */
+.admin-alert-error {
+  margin-top: 8px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+  font-size: 13px;
+}
+
+.admin-muted {
+  font-size: 14px;
+  color: #6b7280;
+  margin-top: 8px;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+  .admin-issues-filters-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .admin-table-actions {
+    text-align: left;
+  }
+
+  .admin-input {
+    width: 100%;
+  }
+
+  .admin-select {
+    width: 100%;
+  }
+}

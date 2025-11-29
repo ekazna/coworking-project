@@ -1,0 +1,329 @@
+.wb-detail-page {
+  min-height: calc(100vh - 60px);
+  background: #f5f5f7;
+  padding: 24px 16px 40px;
+}
+
+.wb-detail-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.wb-detail-title {
+  margin: 0 0 14px;
+  font-size: 24px;
+}
+
+/* Карточки */
+.wb-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 18px 20px 20px;
+  margin-top: 10px;
+  margin-bottom: 18px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+}
+
+.wb-card-resource {
+  margin-top: 16px;
+}
+
+.wb-card-subtitle {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.wb-resource-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 6px;
+}
+
+.wb-meta-item {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+}
+
+.wb-meta-label {
+  color: #6b7280;
+}
+
+.wb-meta-value {
+  font-weight: 500;
+}
+
+.wb-resource-description {
+  margin-top: 6px;
+  white-space: pre-wrap;
+}
+
+/* Форма */
+.wb-card-form {
+  margin-top: 4px;
+}
+
+.wb-form-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 200px) minmax(0, 1fr);
+  gap: 16px;
+  margin-bottom: 10px;
+}
+
+.wb-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.wb-form-field-wide {
+  min-width: 0;
+}
+
+.wb-form-field-month {
+  max-width: 260px;
+  margin-top: 4px;
+}
+
+.wb-form-label {
+  font-size: 13px;
+  color: #374151;
+}
+
+.wb-input {
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  padding: 8px 10px;
+  font-size: 14px;
+  background: #f9fafb;
+  outline: none;
+  transition: border 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+}
+
+.wb-input:focus {
+  border-color: #2b6be7;
+  background: #ffffff;
+  box-shadow: 0 0 0 1px rgba(43, 107, 231, 0.2);
+}
+
+.wb-input-readonly {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+/* Радио */
+.wb-radio-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 4px;
+}
+
+.wb-radio-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+/* Время */
+.wb-time-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin: 10px 0 4px;
+}
+
+/* Оборудование */
+.wb-equipment-block {
+  border-top: 1px solid #e5e7eb;
+  margin-top: 18px;
+  padding-top: 14px;
+}
+
+.wb-eq-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) 90px auto;
+  gap: 12px;
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
+
+.wb-eq-type,
+.wb-eq-qty {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.wb-eq-remove {
+  align-self: flex-end;
+}
+
+.wb-eq-hint {
+  margin-top: 6px;
+}
+
+/* Кнопки */
+.wb-actions-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.wb-btn-primary,
+.wb-btn-secondary,
+.wb-btn-tertiary,
+.wb-btn-ghost {
+  border-radius: 999px;
+  padding: 9px 18px;
+  font-size: 14px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: 0.15s ease;
+  white-space: nowrap;
+}
+
+.wb-btn-primary {
+  background: #2b6be7;
+  border-color: #2b6be7;
+  color: #ffffff;
+}
+
+.wb-btn-primary:hover:enabled {
+  background: #2156c0;
+  border-color: #2156c0;
+}
+
+.wb-btn-secondary {
+  background: #ffffff;
+  color: #111827;
+  border-color: #d1d5db;
+}
+
+.wb-btn-secondary:hover:enabled {
+  background: #f3f4f6;
+}
+
+.wb-btn-tertiary {
+  padding: 6px 12px;
+  font-size: 13px;
+  background: #fee2e2;
+  color: #b91c1c;
+  border-color: #fecaca;
+}
+
+.wb-btn-tertiary:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.wb-btn-ghost {
+  padding: 6px 0;
+  border-radius: 0;
+  border: none;
+  background: transparent;
+  color: #2563eb;
+}
+
+.wb-btn-ghost:hover {
+  text-decoration: underline;
+}
+
+/* Алерты / текст */
+.wb-alert-error {
+  margin-top: 8px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+  font-size: 13px;
+}
+
+.wb-alert-success {
+  margin-top: 8px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: #ecfdf5;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+  font-size: 13px;
+}
+
+.wb-muted {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+  .wb-detail-page {
+    padding-top: 18px;
+  }
+
+  .wb-form-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .wb-time-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .wb-eq-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .wb-card {
+    padding: 16px 14px 18px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* Блок предварительного расчёта стоимости */
+.wb-price-summary {
+  margin-top: 24px;
+  padding: 16px 18px;
+  border-radius: 12px;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+}
+
+.wb-price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.wb-price-row-total {
+  margin-top: 8px;
+  font-weight: 600;
+}
+
+.wb-price-label {
+  color: #4b5563;
+}
+
+.wb-price-value {
+  color: #111827;
+}
+
+.wb-price-hint {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #9ca3af;
+}

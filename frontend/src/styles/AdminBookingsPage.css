@@ -1,0 +1,438 @@
+/* Страница */
+.admin-bookings-page {
+  min-height: calc(100vh - 60px);
+  background: #f5f5f7;
+  padding: 24px 16px 40px;
+}
+
+.admin-bookings-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.admin-bookings-title {
+  margin: 0 0 16px;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+/* Блок фильтров */
+.admin-bookings-filters {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 14px 18px 16px;
+  margin-bottom: 18px;
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.05);
+  border: 1px solid #e5e7eb;
+}
+
+/* Оба ряда фильтров делаем сеткой, чтобы всё ровно растягивалось */
+.admin-bookings-filters-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 12px;
+  align-items: flex-end;
+}
+
+/* второй ряд (даты + пресеты) — чуть другие минимальные ширины */
+.admin-bookings-filters-row--dates {
+  margin-top: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+
+/* подпись + инпут/селект в столбик */
+.admin-filter-label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 14px;
+  color: #374151;
+}
+
+/* в блоке фильтров все инпуты/селекты занимают всю доступную ширину */
+.admin-bookings-filters .admin-input,
+.admin-bookings-filters .admin-select {
+  width: 95%;
+  min-width: 0;
+  padding: 2%;
+}
+
+/* базовые контролы (совместимы с другими админ-страницами) */
+.admin-select {
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  padding: 8px 10px;
+  font-size: 14px;
+  background: #f9fafb;
+  outline: none;
+  transition: border 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+}
+
+.admin-select:focus {
+  border-color: #2b6be7;
+  background: #ffffff;
+  box-shadow: 0 0 0 1px rgba(43, 107, 231, 0.2);
+}
+
+.admin-input {
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  padding: 8px 10px;
+  font-size: 14px;
+  background: #ffffff;
+  outline: none;
+  transition: border 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+}
+
+.admin-input::placeholder {
+  color: #9ca3af;
+}
+
+.admin-input:focus {
+  border-color: #2b6be7;
+  background: #ffffff;
+  box-shadow: 0 0 0 1px rgba(43, 107, 231, 0.2);
+}
+
+/* Кнопки */
+.admin-btn {
+  border-radius: 10px;
+  padding: 8px 14px;
+  border: 1px solid #2b6be7;
+  background: #2b6be7;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.15s ease;
+  white-space: nowrap;
+}
+
+.admin-btn:hover {
+  background: #2156c0;
+  border-color: #2156c0;
+}
+
+.admin-btn-secondary {
+  background: #ffffff;
+  color: #1f2933;
+  border-color: #d1d5db;
+}
+
+.admin-btn-secondary:hover {
+  background: #f9fafb;
+  border-color: #9aa4b2;
+}
+
+.admin-btn-small {
+  padding: 6px 10px;
+  font-size: 13px;
+}
+
+/* Пресеты и сброс справа */
+.admin-bookings-presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.admin-presets-label {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.admin-bookings-reset {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Таблица */
+.admin-table-wrapper {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 16px 18px 18px;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+  border: 1px solid #e5e7eb;
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.admin-table thead tr {
+  background: #f9fafb;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.admin-table th {
+  font-weight: 600;
+  color: #374151;
+}
+
+.admin-table tbody tr:hover {
+  background: #f3f4ff;
+}
+
+.admin-table-actions {
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* Бейджи статуса / типа / формата */
+.booking-status {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.booking-status-active {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.booking-status-cancelled,
+.booking-status-canceled {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.booking-status-completed {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.booking-status-conflicted {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.booking-status-default {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.booking-type-badge,
+.booking-time-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  background: #f3f4f6;
+  color: #374151;
+}
+
+/* Алерты / текст */
+.admin-alert-error {
+  margin-top: 8px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+  font-size: 13px;
+}
+
+.admin-muted {
+  font-size: 14px;
+  color: #6b7280;
+  margin-top: 8px;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+  .admin-bookings-filters-row,
+  .admin-bookings-filters-row--dates {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-table-actions {
+    text-align: left;
+  }
+}
+
+
+.admin-bookings-page {
+  min-height: calc(100vh - 60px);
+  background: #f5f5f7;
+  padding: 24px 16px 40px;
+}
+
+.admin-bookings-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.admin-bookings-title {
+  margin: 0 0 16px;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+/* Блок фильтров */
+.admin-bookings-filters {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 16px 18px 18px;
+  margin-bottom: 18px;
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.05);
+  border: 1px solid #e5e7eb;
+}
+
+/* Общая строка */
+.admin-bookings-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Между блоками-строками небольшой отступ */
+.admin-bookings-row + .admin-bookings-row {
+  margin-top: 10px;
+}
+
+/* 1 строка — поисковые поля: пусть тянутся равномерно */
+.admin-bookings-row-inputs .admin-filter-label {
+  flex: 1 1 260px;
+}
+
+/* 2 строка — селекты */
+.admin-bookings-row-selects .admin-filter-label {
+  flex: 1 1 170px;
+}
+
+/* 3 строка — даты */
+.admin-bookings-row-dates .admin-filter-label {
+  flex: 0 1 180px;
+}
+
+/* 4 строка — кнопки */
+.admin-bookings-row-buttons {
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* подпись + контрол */
+.admin-filter-label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 14px;
+  color: #374151;
+}
+
+/* базовый инпут */
+.admin-input {
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  padding: 8px 10px;
+  font-size: 14px;
+  background: #ffffff;
+  outline: none;
+  transition: border 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+}
+
+.admin-input::placeholder {
+  color: #9ca3af;
+}
+
+.admin-input:focus {
+  border-color: #2b6be7;
+  background: #ffffff;
+  box-shadow: 0 0 0 1px rgba(43, 107, 231, 0.2);
+}
+
+/* селект */
+.admin-select {
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  padding: 8px 10px;
+  font-size: 14px;
+  background: #f9fafb;
+  outline: none;
+  transition: border 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+}
+
+.admin-select:focus {
+  border-color: #2b6be7;
+  background: #ffffff;
+  box-shadow: 0 0 0 1px rgba(43, 107, 231, 0.2);
+}
+
+/* Кнопки */
+.admin-btn {
+  border-radius: 10px;
+  padding: 8px 14px;
+  border: 1px solid #2b6be7;
+  background: #2b6be7;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.15s ease;
+  white-space: nowrap;
+}
+
+.admin-btn:hover {
+  background: #2156c0;
+  border-color: #2156c0;
+}
+
+.admin-btn-small {
+  padding: 6px 10px;
+  font-size: 13px;
+}
+
+.admin-btn-secondary {
+  background: #ffffff;
+  color: #1f2933;
+  border-color: #d1d5db;
+}
+
+.admin-btn-secondary:hover {
+  background: #f9fafb;
+  border-color: #9aa4b2;
+}
+
+/* Пресеты и сброс */
+.admin-bookings-presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.admin-presets-label {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.admin-bookings-reset {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+  .admin-bookings-row-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .admin-bookings-reset {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
