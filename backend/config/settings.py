@@ -159,5 +159,5 @@ CORS_ALLOWED_ORIGINS = [
 # Для разработки: все письма печатаются в консоль
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
-TELEGRAM_BOT_TOKEN = "8406899604:AAGr_Kh0GAikAiKrek4MIRr7g6SEy4b2Bn8"
+TELEGRAM_BOT_TOKEN = ""
 TELEGRAM_DEFAULT_PARSE_MODE = "HTML"  
